@@ -5,8 +5,8 @@ import {
   currentValue,
 } from "./domModels.js";
 
-const regex_number = /[0-9]/;
-const regex_operator = /x|\/|\-|\+|\./gi;
+const regex_number = /[0-9]|\./;
+const regex_operator = /x|\/|\-|\+/gi;
 
 export const displayAdd = (content) => {
 
@@ -35,3 +35,25 @@ export const displayAdd = (content) => {
 
   }
 };
+
+export const evaluate = (valueOne, operand, valueTwo) => {
+
+    if (operand.textContent === "+") {
+        prevValue.textContent = Number(valueOne.textContent) + Number(valueTwo.textContent)
+        operatorValue.textContent = ""
+        currentValue.textContent = ""
+    } else if (operand.textContent === "/") {
+        prevValue.textContent = Number(valueOne.textContent) / Number(valueTwo.textContent)
+        operatorValue.textContent = ""
+        currentValue.textContent = ""
+    } else if (operand.textContent === "-") {
+        prevValue.textContent = Number(valueOne.textContent) - Number(valueTwo.textContent)
+        operatorValue.textContent = ""
+        currentValue.textContent = ""
+    } else if (operand.textContent === "X") {
+        prevValue.textContent = Number(valueOne.textContent) * Number(valueTwo.textContent)
+        operatorValue.textContent = ""
+        currentValue.textContent = ""
+    }
+
+}

@@ -1,8 +1,17 @@
-import {name} from "./modules/test.js"
-import {display, equals, buttons} from "./modules/domModels.js"
-import {displayAdd} from "./modules/functions.js"
+import { name } from "./modules/test.js";
+import {
+  display,
+  equals,
+  buttons,
+  prevValue,
+  operatorValue,
+  currentValue,
+} from "./modules/domModels.js";
 
-buttons.forEach(button => button.addEventListener("click", e => displayAdd(e.target.textContent)))
-equals.addEventListener("click", (e) => display.textContent = "bow wow")
+import { displayAdd, evaluate } from "./modules/functions.js";
 
+buttons.forEach((button) =>
+  button.addEventListener("click", (e) => displayAdd(e.target.textContent))
+);
 
+equals.addEventListener("click", (e) => evaluate(prevValue,operatorValue,currentValue));
