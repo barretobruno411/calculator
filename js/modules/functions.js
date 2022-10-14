@@ -14,6 +14,9 @@ export const displayAdd = (content) => {
     if (prevValue.textContent === "0") {
       prevValue.textContent = content;
     } else if (operatorValue.textContent) {
+      if (currentValue.textContent.includes(".") && content.includes(".")) {
+        return;
+      }
       currentValue.textContent += content;
     } else if (prevValue.textContent !== "0") {
       if (prevValue.textContent.includes(".") && content.includes(".")) {
