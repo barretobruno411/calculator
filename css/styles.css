@@ -43,9 +43,13 @@ body {
     font-weight: bolder;
     color: white;
     cursor: pointer;
+    user-select: none;
 }
 .number:hover {
     background-color: #DE3163;
+}
+.number:active {
+    background-color: grey;
 }
 
 .digit {
@@ -56,9 +60,13 @@ body {
     font-size: 1.5rem;
     font-weight: bolder;
     cursor: pointer;
+    user-select: none;
 }
 .digit:hover {
     background-color: #DE3163;
+}
+.digit:active {
+    background-color: #FF7F50;
 }
 
 #x {
@@ -84,10 +92,16 @@ body {
 #\+:hover {
     background-color: #DE3163;
 }
+#\+:active {
+    background-color: #FFBF00;
+}
 
 #\= {
     background-color: #FFBF00;
 }
 #\=:hover {
     background-color: #DE3163;
+}
+#\=:active {
+    background-color: #FFBF00;
 }
