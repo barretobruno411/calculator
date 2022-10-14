@@ -8,10 +8,30 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+footer {
+    margin-top: 4vh;
+    
+}
+
+footer h1 {
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+    padding: 2vw;
+    font-weight: bolder;
+}
+
+footer p {
+    text-align: center;
+}
 .calculator {
     padding: 5px;
     background-color: rgb(46, 66, 66);
@@ -34,6 +54,8 @@ body {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
+    min-width: 390px;
+    min-height: 135px;
 }
 
 .number {
