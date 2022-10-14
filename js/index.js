@@ -1,6 +1,8 @@
 import {name} from "./modules/test.js"
-import {display, equals} from "./modules/domModels.js"
+import {display, equals, buttons} from "./modules/domModels.js"
+import {displayAdd} from "./modules/functions.js"
 
-console.log(display)
-console.log(equals)
+buttons.forEach(button => button.addEventListener("click", e => displayAdd(e.target.textContent)))
 equals.addEventListener("click", (e) => display.textContent = "bow wow")
+
+
